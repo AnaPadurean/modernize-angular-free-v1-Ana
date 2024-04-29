@@ -41,13 +41,14 @@ const routes: Routes = [
         
       },
       {
+        path: 'clients', component:ClientsComponent
+      }, 
+      {
         path: 'extra',
         loadChildren: () =>
           import('./pages/extra/extra.module').then((m) => m.ExtraModule),
       },
-      {
-        path: 'clients', component: ClientsComponent}
-        ,
+ 
     ],
   },
   {

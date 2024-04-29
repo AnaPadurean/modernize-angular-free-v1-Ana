@@ -19,8 +19,7 @@ import { AddClientComponent } from './clienti-add-component/clienti-add-componen
   styleUrls: ['./clients.component.scss']
 })
 export class ClientsComponent implements OnInit{
-  displayedColumns: string[] = [
-    'id',
+  displayedColumns: string[] = [ 
     'nume',
     'prenume',
     'email',
@@ -45,19 +44,7 @@ export class ClientsComponent implements OnInit{
     console.log(this.listaClienti);
   }
 
-  // openEditForm(data:any) {
-  //   const dialogRef = this.dialog.open(ClientsEditDialogComponent, {
-  //     data,
-  //   });
-    
-  //   dialogRef.afterClosed().subscribe({
-  //     next: (val) => {
-  //       if (val) {
-  //         this.listaClienti();
-  //       }
-  //     },
-  //   });
-  // }
+ 
 
   openEditForm(client: any): void {
     const dialogRef = this.dialog.open(ClientsEditDialogComponent, {
@@ -113,13 +100,6 @@ export class ClientsComponent implements OnInit{
     });
   }
 
-  // getClientById(id: number) {
-  //   this.clientsService.getClient(id).subscribe((client: any) => {
-  //     console.log('Informații despre clientul cu ID-ul', id, ':', client);
-  //   }, (error) => {
-  //     console.error('Eroare la obținerea informațiilor despre clientul cu ID-ul', id, ':', error);
-  //   });
-  // }
 
   stergeClient(id: number) {
     const confirm = window.confirm("Sunteți sigur că doriți să ștergeți acest client?");

@@ -1,27 +1,19 @@
 {
   "clienti": [
     {
-      "nume": "Maria",
+      "nume": "Ilie",
+      "prenume": "Popescu",
+      "email": "popescu.ilie@yahoo.com",
+      "telefon": "0744442458",
+      "id": "4",
+      "id_masina": "3"
+    },
+    {
+      "nume": "Ion",
       "prenume": "Aurelia",
       "email": "aurelia.maria@yahoo.com",
       "telefon": "0796442458",
       "id": "3",
-      "id_masina": "2"
-    },
-    {
-      "id": "4",
-      "nume": "Andrei",
-      "prenume": "Aurelia",
-      "email": "aurelia.maria@yahoo.com",
-      "telefon": "0796442459",
-      "id_masina": "3"
-    },
-    {
-      "nume": "Andrei",
-      "prenume": "Ion",
-      "email": "ion@ion.com",
-      "telefon": "0796442458",
-      "id": "9b2d",
       "id_masina": "1"
     }
   ],
@@ -46,100 +38,53 @@
       "anFabricatie": "2020",
       "tipMotorizare": "electric",
       "capacitateMotor": "1.9",
-      "caiPutere": "200"
+      "caiPutere": "160"
     },
     {
       "id": "3",
-      "numarInmatriculare": "b 123 reb",
+      "numarInmatriculare": "IF 123 REB",
       "serieSasiu": "FV2131231233",
-      "marca": "AUDI",
-      "model": "A6",
-      "anFabricatie": "2020",
+      "marca": "FORD",
+      "model": "MONDEO",
+      "anFabricatie": "2024",
       "tipMotorizare": "electric",
-      "capacitateMotor": "1.9",
+      "capacitateMotor": "2.0",
       "caiPutere": "200"
+    },
+    {
+      "id": "4",
+      "numarInmatriculare": "HD 12 RAM",
+      "serieSasiu": "FV2131231233",
+      "marca": "NISSAN",
+      "model": "S2",
+      "anFabricatie": "2016",
+      "tipMotorizare": "benzina",
+      "capacitateMotor": "1.4",
+      "caiPutere": "100"
     }
   ],
   "programari": [
     {
-      "nume": "",
-      "prenume": "",
-      "idMasina": "",
-      "actiune": "",
-      "modalitateContact": "",
-      "email": "",
-      "telefon": "",
-      "intervalTimp": "",
-      "id": "c8d3"
-    },
-    {
-      "id": "2e15",
-      "nume": "Maria",
-      "prenume": "Maria",
-      "idMasina": "PH 01 ANA",
-      "actiune": "test",
+      "id": "1f70",
+      "nume": "Ion",
+      "prenume": "Ion",
+      "idMasina": "HD 12 RAM",
+      "actiune": "Defectiune motor",
       "modalitateContact": "personal",
       "email": "",
       "telefon": "",
-      "intervalTimp": "12:22"
-    },
-    {
-      "id": "594b",
-      "nume": "Andrei",
-      "prenume": "Maria",
-      "idMasina": "B 01 ABC",
-      "actiune": "test",
-      "modalitateContact": "personal",
-      "email": "",
-      "telefon": "",
-      "intervalTimp": "12:22"
+      "intervalTimp": "12:30"
     }
   ],
   "reparatii": [
     {
-      "id": "5633",
-      "numePersoana": "Maria",
-      "prenumePersoana": "Maria",
-      "problemaMasina": "inlocuire injectoare",
-      "nrPieseSchimbate": "4",
-      "pret": "1300",
-      "durataReparatie": "120"
-    },
-    {
-      "id": "563",
-      "numePersoana": "Maria",
+      "id": "41c2",
+      "numePersoana": "Ion",
       "prenumePersoana": "Ion",
-      "problemaMasina": "schimbat bujii",
-      "nrPieseSchimbate": "1",
-      "pret": "1000",
-      "durataReparatie": "60"
-    },
-    {
-      "id": "0d6e",
-      "numePersoana": "",
-      "prenumePersoana": "",
-      "problemaMasina": "",
-      "nrPieseSchimbate": "",
-      "pret": "",
-      "durataReparatie": ""
-    },
-    {
-      "id": "42a4",
-      "numePersoana": "",
-      "prenumePersoana": "",
-      "problemaMasina": "",
-      "nrPieseSchimbate": "",
-      "pret": "",
-      "durataReparatie": ""
-    },
-    {
-      "id": "13ba",
-      "numePersoana": "",
-      "prenumePersoana": "",
-      "problemaMasina": "",
-      "nrPieseSchimbate": "",
-      "pret": "",
-      "durataReparatie": ""
+      "problemaMasina": "Schimbare injectoare",
+      "nrPieseSchimbate": "3",
+      "pret": "2000",
+      "durataReparatie": "50"
     }
   ]
 }
