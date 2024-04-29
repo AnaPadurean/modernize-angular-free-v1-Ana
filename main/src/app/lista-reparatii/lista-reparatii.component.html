@@ -1,0 +1,52 @@
+<div class="main-body">
+    <!-- The filter section -->
+    <mat-form-field aria-haspopup="outline">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="i.e Ion Alexandru" #input>
+    </mat-form-field>
+    <!-- The client details table -->
+    <div class="table-container">
+      <table mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="numePersoana">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Nume Persoana</strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.numePersoana}} </td>
+        </ng-container>
+        <ng-container matColumnDef="prenumePersoana">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Prenume Persoana</strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.prenumePersoana}}</td>
+        </ng-container>
+         <ng-container matColumnDef="problemaMasina">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong>Problema Masina</strong></th>
+          <td mat-cell *matCellDef="let row"> {{row.problemaMasina}}</td>
+        </ng-container>
+         <ng-container matColumnDef="nrPieseSchimbate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Nr. piese schimbate</strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.nrPieseSchimbate}}</td>
+        </ng-container>
+
+         <ng-container matColumnDef="pret">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Pret</strong>  </th>
+          <td mat-cell *matCellDef="let row"> {{row.pret}}</td>
+        </ng-container>
+     
+      
+      <ng-container matColumnDef="durataReparatie">
+       <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Durata Reparatie</strong>  </th>
+       <td mat-cell *matCellDef="let row"> {{row.durataReparatie}}</td>
+     </ng-container>
+         
+ 
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ 
+        <!-- This row will be shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="5">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+ 
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of clients"></mat-paginator>
+    </div>
+  </div>
+
+  

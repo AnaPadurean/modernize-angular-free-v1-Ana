@@ -1,0 +1,28 @@
+<h2>Add Client</h2>
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Nume: Introduceți numele" formControlName="nume">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Prenume: Introduceți prenumele" formControlName="prenume">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email: Introduceți adresa de email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Telefon: Introduceți numărul de telefon" formControlName="telefon">
+  </mat-form-field>
+      <!-- Input fields for client data -->
+      <!-- ... -->
+      <div class="action-buttons">
+        <button mat-button color="primary" type="submit" [disabled]="!clientForm.valid">Adaugă Client</button>
+        <span class="button-spacer"></span> 
+        <button mat-button color="warn" (click)="onCancel()">Cancel</button>
+    </div>
+</form>
+  
+  
+  

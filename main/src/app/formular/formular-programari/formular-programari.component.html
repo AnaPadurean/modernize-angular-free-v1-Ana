@@ -1,0 +1,60 @@
+<h1>Formular programari</h1>
+
+<form (ngSubmit)="submitForm()" #programareForm="ngForm">
+
+  <mat-form-field>
+    <mat-label>Nume Persoana</mat-label>
+    <mat-select name="nume" [(ngModel)]="programare.nume" required>
+      <mat-option *ngFor="let client of clienti" [value]="client.nume">{{ client.nume }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Prenume</mat-label>
+    <mat-select name="prenume" [(ngModel)]="programare.prenume" required>
+      <mat-option *ngFor="let client of clienti" [value]="client.nume">{{ client.prenume }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Alegeti masina</mat-label>
+    <mat-select name="idMasina" [(ngModel)]="programare.idMasina" required>
+      <mat-option *ngFor="let masina of masini" [value]="masina.numarInmatriculare">{{ masina.numarInmatriculare }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Detalii problema masina</mat-label>
+    <input matInput name="Actiune" [(ngModel)]="programare.actiune" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Modalitate de contact</mat-label>
+    <mat-select name="modalitateContact" [(ngModel)]="programare.modalitateContact" required>
+      <mat-option value="email">Email</mat-option>
+      <mat-option value="telefon">Telefon</mat-option>
+      <mat-option value="personal">Personal</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div *ngIf="programareForm.controls['modalitateContact'].value === 'email'">
+    <mat-form-field>
+      <mat-label>Completati email-ul</mat-label>
+      <input matInput name="email" [(ngModel)]="programare.email" required>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="programareForm.controls['modalitateContact'].value === 'telefon'">
+    <mat-form-field>
+      <mat-label>Completati numarul de telefon</mat-label>
+      <input matInput type="tel" name="telefon" [(ngModel)]="programare.telefon" required>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field>
+    <mat-label>Interval de timp (între 8 și 17)</mat-label>
+    <input matInput type="time" name="intervalTimp" [(ngModel)]="programare.intervalTimp" required min="08:00:00" max="17:00:00" step="60" />
+  </mat-form-field>
+  
+  <button mat-raised-button color="primary" type="submit" #programareButton>Programare</button>
+</form>

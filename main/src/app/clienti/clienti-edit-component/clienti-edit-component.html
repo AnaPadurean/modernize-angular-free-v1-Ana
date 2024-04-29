@@ -1,0 +1,25 @@
+<h2>Edit Client</h2>
+
+<form [formGroup]="clientForm" (ngSubmit)="onSaveClienti()">
+  <mat-form-field>
+    <input matInput placeholder="Nume: Introduceți numele" formControlName="nume">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Prenume: Introduceți prenumele" formControlName="prenume">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email: Introduceți adresa de email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Telefon: Introduceți numărul de telefon" formControlName="telefon">
+  </mat-form-field>
+
+  <div class="buttons">
+    <button mat-button color="primary" type="submit" [disabled]="!clientForm.valid">Save</button>
+    <span class="button-spacer"></span> 
+    <button mat-button color="warn" (click)="onCancel()">Cancel</button>
+  </div>
+</form>

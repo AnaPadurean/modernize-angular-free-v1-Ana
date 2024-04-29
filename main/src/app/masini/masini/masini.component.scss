@@ -1,0 +1,26 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import "~material-icons/iconfont/material-icons.css";
+.example-spacer {
+    flex: 1 1 auto;
+}
+mat-form-field {
+  width: 100%;
+  margin: auto;
+}
+.main-body {
+  max-width: 80%;
+  margin: 20px auto;
+}
+.action-icon{
+  size: 20px !important;
+}
+.action-icon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.material-icons{
+  font-family: 'Material Icons' !important;
+}
+.mat-icon{
+  font-family: 'Material Icons' !important;
+}

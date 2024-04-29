@@ -1,0 +1,43 @@
+h2 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mat-form-field {
+    width: calc(100% - 32px); 
+    margin-bottom: 15px;
+  }
+  
+  .input-label {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .buttons {
+    text-align: center;
+    margin-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button-spacer {
+    display: inline-block;
+    width: 20px;
+    margin-left: 10px;
+  }
+
+  
+
+  
+  
+  

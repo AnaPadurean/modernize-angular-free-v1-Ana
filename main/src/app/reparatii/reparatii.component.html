@@ -1,0 +1,45 @@
+<h1>Inregistrare reparatii</h1>
+
+<form (ngSubmit)="submitForm()" #reparatiiForm="ngForm">
+
+ 
+
+  <mat-form-field>
+    <mat-label>Nume</mat-label>
+    <mat-select name="nume" [(ngModel)]="reparatii.numePersoana" required>
+      <mat-option *ngFor="let programare of programari" [value]="programare.nume">{{ programare.nume }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Prenume</mat-label>
+    <mat-select name="prenume" [(ngModel)]="reparatii.prenumePersoana" required>
+      <mat-option *ngFor="let programare of programari" [value]="programare.prenume">{{ programare.nume }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Problema masina</mat-label>
+    <input matInput name="problemaMasina" [(ngModel)]="reparatii.problemaMasina" required>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Numar piese schimbate</mat-label>
+    <input matInput name="nrPieseSchimbate" [(ngModel)]="reparatii.nrPieseSchimbate" required>
+  </mat-form-field> 
+  
+  <mat-form-field>
+    <mat-label>Pret reparatie</mat-label>
+    <input matInput name="pret" [(ngModel)]="reparatii.pret" required>
+  </mat-form-field> 
+
+  <mat-form-field>
+    <mat-label>Durata reparatie</mat-label>
+    <input matInput name="durataReparatie" [(ngModel)]="reparatii.durataReparatie" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" #reparatieButton>Adauga Reparatie</button>
+</form>
+
